@@ -14,26 +14,27 @@
 
 get_header(); ?>
 
+
 <section class="banner">
   <div class="container">
     <div class="banner__inner">
-      <h1 class="banner__title">Контекстная реклама</h1>
-      <div class="banner__subtitle">от сертифицированных партнеров Google и Yandex</div>
+      <h1 class="banner__title"><?php the_field('banner__title', 'option'); ?></h1>
+      <div class="banner__subtitle"><?php the_field('banner__subtitle', 'option'); ?></div>
       <div class="banner__items">
         <div class="banner__item">
           <div class="banner__item-img banner__item-img_bg1"></div>
-          <div class="banner__item-text">Ваш сайт будет в топ-3 Google с гарантией по договору</div>
+          <div class="banner__item-text"><?php the_field('banner__item_text', 'option'); ?></div>
         </div>
         <div class="banner__item">
           <div class="banner__item-img banner__item-img_bg2"></div>
-          <div class="banner__item-text">Приводим реальные продажи а не клики и показы</div>
+          <div class="banner__item-text"><?php the_field('banner__item_text_more', 'option'); ?></div>
         </div>
       </div>
-      <div class="banner__buttons"><a class="btn banner__btn" href="#"><span>Оставить заявку</span></a>
-        <div class="banner__desc">И мы бесплатно рассчитаем стоимость и сроки настройки Вашей рекламы за 1 час</div>
+      <div class="banner__buttons"><a class="btn banner__btn" href="#"><span><?php the_field('btn_banner', 'option'); ?></span></a>
+        <div class="banner__desc"><?php the_field('banner__desc', 'option'); ?></div>
       </div><a class="banner__scroll" href="#result">
         <div class="banner__scroll-img"></div>
-        <div class="banner__scroll-text">Листайте вниз</div></a>
+        <div class="banner__scroll-text"><?php the_field('banner__scroll_text', 'option'); ?></div></a>
     </div>
     <div class="scene banner_scene" id="scene3">
       <div class="layer" data-depth="0.1">

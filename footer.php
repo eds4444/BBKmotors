@@ -19,7 +19,7 @@
         <div class="footer__info-sert">Сертифицированное агенство Google Adwords и Yandex Direct</div><a class="footer__info-conf" href="#">Политика конфиденциальности</a>
       </div>
       <div class="footer__soc"><a class="footer__soc-icon footer__soc-icon_inst" href="#"></a><a class="footer__soc-icon footer__soc-icon_vk" href="#"></a></div>
-      <div class="footer__contacts"><a class="footer__contacts-phone" href="tel:+77018295099">+7 (701) 829-50-99</a>
+      <div class="footer__contacts"><a class="footer__contacts-phone" href="tel:<?php the_field('phone_general', 'option'); ?>"><?php the_field('phone_general', 'option'); ?></a>
         <div class="footer__contacts-address">Алматы, Назарбаева 193</div>
       </div><a class="btn footer__btn" href="#"> <span>Получить консультацию</span></a><a class="footer__info-conf footer__info-conf_mobile" href="#">Политика конфиденциальности</a>
     </div>

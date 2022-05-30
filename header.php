@@ -25,14 +25,16 @@
 <header class="header">
   <div class="container">
     <div class="header__inner">
-      <div class="header__logo"><img src="<?php echo get_template_directory_uri( ); ?>/assets/img/logo.png" alt="RedHat"></div>
-      <div class="header__desc">Сертифицированное агенство Google Adwords и Yandex Direct</div><a class="header__phone-mobile" href="tel:+77076225781"></a>
+      <div class="header__logo"><img src="<?php the_field('logo_header', 'option'); ?>" alt="RedHat"></div>
+      <div class="header__desc"><?php the_field('description_header', 'option'); ?></div><a class="header__phone-mobile" href="tel:<?php the_field('phone_general', 'option'); ?>"></a>
       <div class="header__burger"></div>
       <div class="header__sidebar">
-        <div class="header__sidebar-close"></div><a class="header__phone" href="tel:+77076225781"><span class="header__phone-icon"></span><span class="header__phone-number">+7 707 622 57 81 </span></a><a class="btn btn_light header__btn" href="#"><span>Заказать звонок</span></a>
+        <div class="header__sidebar-close"></div><a class="header__phone" href="tel:<?php the_field('phone_general', 'option'); ?>"><span class="header__phone-icon"></span><span class="header__phone-number"><?php the_field('phone_general', 'option'); ?></span></a><a class="btn btn_light header__btn" href="#"><span><?php the_field('text_button_header', 'option'); ?></span></a>
       </div>
     </div>
   </div>
 </header>
+
+
 
 
