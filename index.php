@@ -49,18 +49,20 @@ get_header(); ?>
   </div>
 </section>
 <section class="result" id="result">
-  <h2 class="result__title">Результаты наших клиентов</h2>
+  <h2 class="result__title"><?php the_field('result__title', 'option'); ?></h2>
   <div class="owl-carousel owl-theme result__carousel">
+
+
     <div class="r-item">
       <div class="container">
         <div class="r-item__header">
           <div class="r-item__review r-item__review_1">
-            <div class="r-item__icon r-item__icon_1"></div>
+            <div class="r-item__logo_company"><img src="<?php the_field('logo_header', 'option'); ?>" alt="logo company"></div>
             <div class="r-item__title"> </div>
             <div class="r-item__text">Ежедневно 300-500 заявок. Окупили нашу комиссию в 150 раз</div>
-            <div class="r-item__img r-item__img_active r-item__img_1 wow animated fadeInLeft slow"></div>
-          </div>
-          <div class="r-item__page r-item__page_1"></div>
+            <div class="r-item__img r-item__img_1"><img src="<?php the_field('logo_header', 'option'); ?>" alt="logo company"></div>
+
+          </div>          
         </div>
         <div class="r-item__body">
           <div class="r-item__about new">
@@ -96,6 +98,8 @@ get_header(); ?>
         </div>
       </div>
     </div>
+
+
     <div class="r-item">
       <div class="container">
         <div class="r-item__header">
@@ -105,7 +109,6 @@ get_header(); ?>
             <div class="r-item__text">За 7 дней окупили вложения в 9.6 раз. сделали 215 заявок</div>
             <div class="r-item__img r-item__img_2"></div>
           </div>
-          <div class="r-item__page r-item__page_2"></div>
         </div>
         <div class="r-item__body">
           <div class="r-item__about">
@@ -140,6 +143,8 @@ get_header(); ?>
         </div>
       </div>
     </div>
+
+
     <div class="r-item">
       <div class="container">
         <div class="r-item__header">
@@ -149,7 +154,6 @@ get_header(); ?>
             <div class="r-item__text">С 9 до 10 вечера получали заказы на всю ночь вперед и останавливали рекламу</div>
             <div class="r-item__img r-item__img_3"></div>
           </div>
-          <div class="r-item__page r-item__page_3"></div>
         </div>
         <div class="r-item__body">
           <div class="r-item__about">
@@ -184,6 +188,8 @@ get_header(); ?>
         </div>
       </div>
     </div>
+
+
     <div class="r-item">
       <div class="container">
         <div class="r-item__header">
@@ -193,7 +199,6 @@ get_header(); ?>
             <div class="r-item__text">Уже через 4 дня продали кран стоимостью 256млн тенге</div>
             <div class="r-item__img r-item__img_4"></div>
           </div>
-          <div class="r-item__page r-item__page_4"></div>
         </div>
         <div class="r-item__body">
           <div class="r-item__about">
@@ -228,6 +233,8 @@ get_header(); ?>
         </div>
       </div>
     </div>
+
+
   </div>
   <div class="result__nav result__nav_mobile">
     <div class="result__nav-prev"></div>
@@ -244,6 +251,8 @@ get_header(); ?>
     </div>
   </div>
 </section>
+
+
 <section class="context">
   <div class="container">
     <div class="context__inner">

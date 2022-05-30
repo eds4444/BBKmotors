@@ -5232,7 +5232,7 @@ h3 {
 }
 
 .r-item__img_1 {
-    background: url(../img/result-img-1.png) no-repeat 50% 50%
+    background:  no-repeat 50% 50%
 }
 
 .r-item__img_2 {
@@ -7568,4 +7568,8 @@ h3 {
         font-size: 0.8125rem;
         line-height: 1.2375rem
     }
+}
+.r-item__logo_company{    
+    text-align: left;
+    margin: auto;
 }
