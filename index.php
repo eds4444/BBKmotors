@@ -53,52 +53,86 @@ get_header(); ?>
   <div class="owl-carousel owl-theme result__carousel">
 
 
-    <div class="r-item">
-      <div class="container">
-        <div class="r-item__header">
-          <div class="r-item__review r-item__review_1">
-            <div class="r-item__logo_company"><img src="<?php the_field('logo_header', 'option'); ?>" alt="logo company"></div>
-            <div class="r-item__title"> </div>
-            <div class="r-item__text">Ежедневно 300-500 заявок. Окупили нашу комиссию в 150 раз</div>
-            <div class="r-item__img r-item__img_1"><img src="<?php the_field('logo_header', 'option'); ?>" alt="logo company"></div>
+  <?php
+    
+    if( have_rows('r_item', 'option') ):
+       
+        while( have_rows('r_item', 'option') ) : the_row();
+            
+            $logo_r_item = get_sub_field('logo_r_item', 'option');
+            $r_item__text = get_sub_field('r_item__text', 'option');
+            $r_item__img = get_sub_field('r_item__img', 'option');
+            $r_item__about_title = get_sub_field('r_item__about_title', 'option');
+            $r_item__about_title2 = get_sub_field('r_item__about_title2', 'option');
 
-          </div>          
-        </div>
-        <div class="r-item__body">
-          <div class="r-item__about new">
-            <h3 class="r-item__about-title">Рост компании в цифрах</h3>
-            <h3 class="r-item__about-title">Рост Яндекс такси в цифрах</h3>
-            <div class="r-item__about-items">
-              <div class="r-item__about-item">
-                <div class="r-item__about-img r-item__about-img_1"></div>
-                <div class="r-item__about-text">+67% выручки за 30 дней и +250% за 2 месяца</div>
-              </div>
-              <div class="r-item__about-item">
-                <div class="r-item__about-img r-item__about-img_2"></div>
-                <div class="r-item__about-text">150 - 500 лидов в день (15 000 в месяц)</div>
-              </div>
-              <div class="r-item__about-item">
-                <div class="r-item__about-img r-item__about-img_3"></div>
-                <div class="r-item__about-text">Выполнили план в 50 000 поездок в день</div>
-              </div>
-              <div class="r-item__about-item">
-                <div class="r-item__about-img r-item__about-img_4"></div>
-                <div class="r-item__about-text">Скрипт продаж вырос с 50% до 80%</div>
-              </div>
-            </div>
-          </div>
-          <div class="r-item__done">
-            <h3 class="r-item__done-title">Что было сделано</h3>
-            <ul class="r-item__done-items">
-              <li class="r-item__done-item">Составили скрипты продаж по телефону</li>
-              <li class="r-item__done-item">Провели аудит рынка и сайтов конкурентов</li>
-              <li class="r-item__done-item"> Мы узнали у конечного клиента, что для него важно при выборе</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+             ?>
 
+            <div class="r-item">
+                  <div class="container">
+                    <div class="r-item__header">
+                      <div class="r-item__review r-item__review_1">
+                        <div class="r-item__logo_company"><img src="<?php echo $logo_r_item ?>" alt="logo company"></div>
+                        <div class="r-item__title"> </div>
+                        <div class="r-item__text"><?php echo $r_item__text ?></div>
+                        <div class="r-item__img r-item__img_1"><img src="<?php echo $r_item__img ?>" alt="logo company"></div>
+
+                      </div>          
+                    </div>
+                    <div class="r-item__body">
+                      <div class="r-item__about new">
+                        <h3 class="r-item__about-title"><?php echo $r_item__about_title ?></h3>
+
+                        <div class="r-item__about-items">
+                          <div class="r-item__about-item"> 
+
+                        <?php                     
+
+                        if( have_rows('ri_tem__about-items', 'option') ):                        
+                            
+                            while( have_rows('ri_tem__about-items', 'option') ) : the_row();                        
+                                
+                                $about_text = get_sub_field('about_text', 'option');
+                                $about_img = get_sub_field('about_img', 'option'); ?>
+                                
+
+                                          
+                            <div class="r-item__about-img r-item__about-img_1"><img src="<?php echo $about_img ?>" alt="about-img"></div>
+                            <div class="r-item__about-text"><?php echo $about_text ?></div>
+                          </div>
+                            
+                            <?php endwhile;             
+                        
+                        endif;
+                        ?>                        
+                          
+                        </div>
+                      </div>
+                      <div class="r-item__done">
+                        <h3 class="r-item__done-title"><?php echo $r_item__about_title2 ?></h3>
+                        <?php
+
+                          if( have_rows('ri_tem__about_items2', 'option') ): ?>
+
+                          <ul class="r-item__done-items"> 
+                             
+                             <?php while( have_rows('ri_tem__about_items2', 'option') ) : the_row();
+                                 
+                                  $r_item__done_item = get_sub_field('r_item__done_item', 'option');?>
+                                 
+                                 <li class="r-item__done-item"><?php echo $r_item__done_item ?></li>
+                              
+                              <?php endwhile; ?>
+                            </ul>
+                          <?php endif;?>        
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+       <?php endwhile;
+    endif;  ?>
+    
+
+   
 
     <div class="r-item">
       <div class="container">

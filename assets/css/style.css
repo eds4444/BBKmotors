@@ -5303,24 +5303,24 @@ h3 {
 }
 
 .r-item__about-img_1 {
-    background: url(../img/result-about-1.png) no-repeat 50% 50%
+    background: no-repeat 50% 50%
 }
 
 .r-item__about-img_2 {
-    background: url(../img/result-about-2.png) no-repeat 50% 50%
+    background:  no-repeat 50% 50%
 }
 
 .r-item__about-img_3 {
-    background: url(../img/result-about-3.png) no-repeat 50% 50%;
+    background:  no-repeat 50% 50%;
     background-size: contain
 }
 
 .r-item__about-img_4 {
-    background: url(../img/result-about-4.png) no-repeat 50% 50%
+    background: no-repeat 50% 50%
 }
 
 .r-item__about-img_5 {
-    background: url(../img/result-about-5.png) no-repeat 50% 50%
+    background:  no-repeat 50% 50%
 }
 
 .r-item__about-img_6 {
@@ -5361,7 +5361,7 @@ h3 {
     align-items: center;
     margin-left: auto;
     width: 24.4375rem;
-    height: 21.125rem;
+    height: auto;
     padding: 2.4375rem 2.5625rem 0 4.6875rem;
     border-radius: 0.5625rem;
     background-color: #fff
@@ -5401,15 +5401,15 @@ h3 {
 }
 
 .r-item__done-item:first-child:before {
-    background: url(../img/result-done-1.png) no-repeat 50% 50%
+    background: no-repeat 50% 50%
 }
 
 .r-item__done-item:nth-child(2):before {
-    background: url(../img/result-done-2.png) no-repeat 50% 50%
+    background: no-repeat 50% 50%
 }
 
 .r-item__done-item:nth-child(3):before {
-    background: url(../img/result-done-3.png) no-repeat 50% 50%
+    background:  no-repeat 50% 50%
 }
 
 .owl-carousel .owl-stage-outer {
